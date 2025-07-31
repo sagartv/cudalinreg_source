@@ -1,18 +1,7 @@
 # CUDA Linear Regression (`cudalinreg`)
 
-This repository contains a Python library, `cudalinreg`, for performing simple linear regression accelerated by NVIDIA CUDA. The core computation is implemented in C++/CUDA for high performance on large datasets, while the library provides a simple, user-friendly Python interface.
+This repository contains a Python library, `cudalinreg`, for performing simple linear regression with one variable accelerated by NVIDIA CUDA. The core computation is implemented in C++/CUDA for high performance on datasets > 100K, while the library provides a simple, user-friendly Python interface. On a modern NVIDIA GPU, the speedup of using this version of Linear Regression with one variable is 2x that of Numpy's linalg.lstq solver for 100K samples.
 
-This project serves as a practical example of:
-- Writing high-performance CUDA kernels.
-- Integrating C++/CUDA code into a Python package.
-- Creating a custom build process using `setuptools` and `nvcc`.
-- Benchmarking a custom GPU implementation against a standard CPU library (NumPy).
-
-## Features
-
-- **High-Performance**: Leverages NVIDIA GPUs to significantly speed up linear regression on large datasets.
-- **Simple API**: Provides a straightforward `fit(X, y)` function, similar to popular data science libraries.
-- **Portable**: Can be compiled and run on any modern NVIDIA GPU by adjusting a single build flag.
 
 ## Prerequisites
 
