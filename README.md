@@ -101,7 +101,7 @@ python3 test_library.py
 ```
 This will output a summary table showing the time taken and speedup factor for each data size.
 
-### Example Output
+### My Results
 
 Below are benchmark results from running on a modern NVIDIA GPU, showcasing the performance of our optimized shared memory implementation.
 
@@ -119,7 +119,7 @@ Below are benchmark results from running on a modern NVIDIA GPU, showcasing the 
 
 #### Analysis of Results
 
-- **Memory Optimization**: The implementation uses a sophisticated shared memory reduction pattern that dramatically reduces global memory contention. Instead of millions of threads competing to update the same memory locations with atomic operations, each thread block performs its reduction in fast shared memory, with only one thread per block writing to global memory. This optimization leads to the impressive speedups seen above.
+- **Memory Optimization**: The implementation uses a shared memory reduction pattern that dramatically reduces global memory contention. Instead of millions of threads competing to update the same memory locations with atomic operations, each thread block performs its reduction in fast shared memory, with only one thread per block writing to global memory. This optimization leads to the impressive speedups seen above.
 
 - **Crossover Point**: The crossover point where CUDA outperforms NumPy occurs at around 100,000 data points, where we see a 2x speedup. For smaller datasets, the overhead of GPU memory transfers dominates the execution time. However, once past this threshold, the benefits of our shared memory optimization become clear, reaching a 5.42x speedup at 100M points.
 
