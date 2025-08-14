@@ -35,7 +35,7 @@ source .venv/bin/activate
 Get the source code for the library.
 
 ```bash
-git clone https://github.com/your-username/cuda_programming.git
+git clone https://github.com/sagartv/cuda_programming.git
 cd cuda_programming
 ```
 *(Note: Please replace the URL with your actual repository URL.)*
