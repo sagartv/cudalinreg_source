@@ -38,7 +38,6 @@ Get the source code for the library.
 git clone https://github.com/sagartv/cuda_programming.git
 cd cuda_programming
 ```
-*(Note: Please replace the URL with your actual repository URL.)*
 
 ### 3. Configure for Your GPU Architecture
 
